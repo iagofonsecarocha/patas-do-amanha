@@ -259,13 +259,49 @@ const FormValidation = {
 };
 
 /* =========================================================
-   INICIALIZAÇÃO GERAL (NAV, MÁSCARAS, MODAL, SPA, FORM)
+   INICIALIZAÇÃO GERAL (NAV, MÁSCARAS, MODAL, SPA, FORM, TEMA)
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
   const cpfInput = document.getElementById("cpf");
   const telefoneInput = document.getElementById("telefone");
   const cepInput = document.getElementById("cep");
+
+  /* ====== TEMA / CONTRASTE (ACESSIBILIDADE) ====== */
+  const themeButtons = document.querySelectorAll("[data-theme-toggle]");
+
+  function aplicarTema(theme) {
+    // remove classes de tema
+    document.body.classList.remove("theme-high-contrast", "theme-dark");
+
+    if (theme === "high-contrast") {
+      document.body.classList.add("theme-high-contrast");
+    } else if (theme === "dark") {
+      document.body.classList.add("theme-dark");
+    }
+    // se for "default", não adiciona classe nenhuma
+
+    // salva preferência
+    localStorage.setItem("patas-theme", theme);
+
+    // atualiza estados aria-pressed dos botões
+    themeButtons.forEach((btn) => {
+      const btnTheme = btn.getAttribute("data-theme-toggle") || "default";
+      btn.setAttribute("aria-pressed", btnTheme === theme ? "true" : "false");
+    });
+  }
+
+  if (themeButtons.length > 0) {
+    const temaSalvo = localStorage.getItem("patas-theme") || "default";
+    aplicarTema(temaSalvo);
+
+    themeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const theme = btn.getAttribute("data-theme-toggle") || "default";
+        aplicarTema(theme);
+      });
+    });
+  }
 
   /* NAV MOBILE (HAMBÚRGUER) */
   const navToggle = document.querySelector(".nav-toggle");

@@ -13,7 +13,7 @@
   <!-- Link de acessibilidade para pular direto para o conteúdo -->
   <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
 
-  <header class="site-header">
+   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">
         <span>🐾 Patas do Amanhã</span>
@@ -43,8 +43,37 @@
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
+
+      <!-- CONTROLES DE ACESSIBILIDADE -->
+      <div class="accessibility-controls" aria-label="Controle de tema e contraste">
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="default"
+          aria-pressed="true"
+        >
+          Padrão
+        </button>
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="high-contrast"
+          aria-pressed="false"
+        >
+          Alto contraste
+        </button>
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="dark"
+          aria-pressed="false"
+        >
+          Modo escuro
+        </button>
+      </div>
     </div>
   </header>
+
 
   <main id="conteudo-principal" role="main">
     <!-- HERO PRINCIPAL -->
@@ -89,7 +118,13 @@
           <button type="button" class="btn" data-spa-view="cadastro">Quero ser voluntário</button>
         </div>
 
-        <div id="spa-root" class="mt-3"></div>
+        <div
+          id="spa-root"
+          class="mt-3"
+          aria-live="polite"
+          aria-label="Conteúdo dinâmico da plataforma do Instituto"
+        ></div>
+
       </div>
     </section>
 

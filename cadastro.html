@@ -15,7 +15,7 @@
 <body>
   <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">
         <span>🐾 Patas do Amanhã</span>
@@ -29,7 +29,7 @@
 
       <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html" class="active">Início</a></li>
 
           <li class="has-submenu">
             <a href="projetos.html" class="nav-link-with-submenu">
@@ -42,9 +42,37 @@
             </ul>
           </li>
 
-          <li><a href="cadastro.html" class="active">Cadastro</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
+
+      <!-- CONTROLES DE ACESSIBILIDADE -->
+      <div class="accessibility-controls" aria-label="Controle de tema e contraste">
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="default"
+          aria-pressed="true"
+        >
+          Padrão
+        </button>
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="high-contrast"
+          aria-pressed="false"
+        >
+          Alto contraste
+        </button>
+        <button
+          type="button"
+          class="btn-accessibility"
+          data-theme-toggle="dark"
+          aria-pressed="false"
+        >
+          Modo escuro
+        </button>
+      </div>
     </div>
   </header>
 
