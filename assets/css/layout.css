@@ -1,0 +1,218 @@
+/* RESETA BÁSICO */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-100);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+/* LAYOUT PRINCIPAL */
+main {
+  min-height: 60vh;
+}
+
+/* HERO (FUNDO) */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 50%,
+    #064034 100%
+  );
+  color: var(--color-neutral-50);
+  padding: var(--space-5) 0;
+}
+
+.hero-small {
+  padding: var(--space-4) 0;
+}
+
+/* HERO: CONTEÚDO CENTRALIZADO (TEXTO + IMAGEM) */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hero-content h1 {
+  margin-top: 0;
+  margin-bottom: var(--space-1);
+  font-size: var(--font-size-xxl);
+}
+
+.hero-content p {
+  margin-top: 0;
+  max-width: 600px;
+  font-size: var(--font-size-md);
+}
+
+/* wrapper da imagem na hero */
+.hero-media {
+  margin-top: var(--space-3);
+}
+
+/* IMAGEM DA HERO */
+.hero-img {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* HERO RESPONSIVO (DESKTOP: 2 COLUNAS) */
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-media {
+    flex: 1;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero-img {
+    max-width: 520px;
+  }
+}
+
+/* SEÇÕES */
+.section {
+  padding: var(--space-5) 0;
+  background-color: var(--color-neutral-100);
+}
+
+.section-alt {
+  background-color: var(--color-neutral-50);
+}
+
+/* GRID 12 COLUNAS */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+/* UTILITÁRIOS DE COLUNAS */
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+/* GRID SIMPLES (USADO EM PROJETOS) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #000;
+  color: var(--color-neutral-50);
+  padding: var(--space-2) 0;
+  margin-top: var(--space-4);
+}
+
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+/* BREAKPOINTS (5 NO TOTAL) */
+
+/* >= 576px */
+@media (min-width: 576px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* >= 768px */
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* >= 992px */
+@media (min-width: 992px) {
+  .hero {
+    padding: var(--space-6) 0;
+  }
+}
+
+/* >= 1200px */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* >= 1400px */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* MOBILE: grid-12 vira 1 coluna para não esmagar os cards */
+@media (max-width: 768px) {
+  .grid-12 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-4,
+  .col-6,
+  .col-12 {
+    grid-column: 1 / -1;
+  }
+}

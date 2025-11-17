@@ -1,0 +1,217 @@
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-50);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.97);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-neutral-300);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--color-neutral-50);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-1);
+}
+
+/* FORMULÁRIOS */
+form {
+  max-width: 600px;
+}
+
+fieldset {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+legend {
+  padding: 0 var(--space-1);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-2);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: var(--font-size-sm);
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-neutral-300);
+  font-size: var(--font-size-sm);
+  transition: border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(12, 124, 89, 0.25);
+  outline: none;
+}
+
+/* VALIDAÇÃO VISUAL HTML5 */
+input:required:invalid:focus {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.25);
+}
+
+input:required:valid {
+  border-color: var(--color-success);
+}
+
+/* ALERTS (FEEDBACK) */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.alert-info {
+  background-color: rgba(2, 119, 189, 0.1);
+  border: 1px solid #81d4fa;
+  color: var(--color-info);
+}
+
+.alert-success {
+  background-color: rgba(46, 125, 50, 0.1);
+  border: 1px solid #a5d6a7;
+  color: var(--color-success);
+}
+
+/* BADGES / TAGS */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-adocao {
+  background-color: rgba(12, 124, 89, 0.12);
+  color: var(--color-primary-dark);
+}
+
+.badge-urgente {
+  background-color: rgba(211, 47, 47, 0.12);
+  color: var(--color-danger);
+}
+
+/* MODAL SIMPLES */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal {
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 480px;
+  width: 90%;
+  box-shadow: var(--shadow-md);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+}
+
+/* SPA - MENU E CONTEÚDO */
+.spa-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.spa-menu .btn {
+  min-width: 160px;
+}
+
+/* Título de cada "tela" da SPA */
+.spa-view-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-1);
+}
+
+/* Mensagens de erro da validação avançada */
+.error-message {
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  margin-top: 0.25rem;
+}
+
+input.has-error {
+  border-color: var(--color-danger);
+}

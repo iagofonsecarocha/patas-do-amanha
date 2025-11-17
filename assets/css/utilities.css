@@ -1,0 +1,41 @@
+/* LINK DE ACESSIBILIDADE (PULAR PARA CONTEÚDO) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* TEXTO CENTRALIZADO */
+.text-center {
+  text-align: center;
+}
+
+/* SR-ONLY (PARA TEXTO APENAS PARA LEITOR DE TELA) */
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* ESPAÇAMENTOS ÚTEIS */
+.mt-2 {
+  margin-top: var(--space-2);
+}
+
+.mt-3 {
+  margin-top: var(--space-3);
+}

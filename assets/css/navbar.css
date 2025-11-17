@@ -1,0 +1,163 @@
+/* HEADER / NAVBAR */
+.site-header {
+  background-color: var(--color-neutral-50);
+  border-bottom: 1px solid var(--color-neutral-200);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: var(--font-size-md);
+}
+
+/* NAV DESKTOP */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  padding: 0.35rem 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-neutral-900);
+}
+
+.main-nav a.active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* SUBMENU (DROPDOWN) */
+.has-submenu {
+  position: relative;
+}
+
+.nav-link-with-submenu {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.submenu-icon {
+  font-size: 0.75rem;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-1) 0;
+  min-width: 220px;
+  opacity: 0;
+  transform: translateY(0);
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 40;
+}
+
+
+.submenu li {
+  padding: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.5rem var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.submenu a:hover {
+  background-color: var(--color-neutral-100);
+}
+
+/* Mostrar submenu no hover (desktop) */
+.has-submenu:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* BOTÃO HAMBÚRGUER (MOBILE) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: var(--space-2);
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-neutral-900);
+  border-radius: 999px;
+  margin: 4px 0;
+}
+
+/* MOBILE FIRST */
+@media (max-width: 768px) {
+  .site-header .container {
+    gap: var(--space-1);
+  }
+
+  .main-nav {
+    position: absolute;
+    inset: 56px 0 auto 0;
+    background-color: var(--color-neutral-50);
+    border-bottom: 1px solid var(--color-neutral-200);
+    display: none;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: var(--space-2);
+    gap: var(--space-1);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  /* Submenu em modo "acordeão" no mobile */
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 0 0.5rem 1rem;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .has-submenu.open .submenu {
+    display: block;
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  /* PALETA DE CORES (8+ CORES) */
+  --color-primary: #0c7c59;
+  --color-primary-light: #19a375;
+  --color-primary-dark: #075039;
+
+  --color-secondary: #ff8c42;
+  --color-secondary-light: #ffb077;
+  --color-secondary-dark: #cc6f32;
+
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e0e0e0;
+  --color-neutral-300: #bdbdbd;
+  --color-neutral-500: #757575;
+  --color-neutral-900: #222222;
+
+  --color-success: #2e7d32;
+  --color-warning: #f9a825;
+  --color-danger: #d32f2f;
+  --color-info: #0277bd;
+
+  /* TIPOGRAFIA (5+ TAMANHOS) */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.25rem;   /* 20px */
+  --font-size-xl: 1.75rem;   /* 28px */
+  --font-size-xxl: 2.25rem;  /* 36px */
+
+  /* ESPAÇAMENTO MODULAR */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* BORDAS / RADIUS / SOMBRA */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+}

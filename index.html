@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Patas do Amanhã - Início</title>
+
+  <meta name="description" content="Instituto Patas do Amanhã - ONG dedicada ao resgate, cuidado e adoção responsável de animais em situação de vulnerabilidade." />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Link de acessibilidade para pular direto para o conteúdo -->
+  <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span>🐾 Patas do Amanhã</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+
+          <li class="has-submenu">
+            <a href="projetos.html" class="nav-link-with-submenu">
+              Projetos <span class="submenu-icon">▾</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="projetos.html#projetos-destaque">Projetos em destaque</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+              <li><a href="projetos.html#doacoes">Doações</a></li>
+            </ul>
+          </li>
+
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" role="main">
+    <!-- HERO PRINCIPAL -->
+        <!-- HERO PRINCIPAL -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Instituto Patas do Amanhã</h1>
+          <p>
+            Resgatando, cuidando e oferecendo um futuro melhor para animais em
+            situação de vulnerabilidade.
+          </p>
+          <a href="projetos.html" class="btn btn-primary">
+            Conheça nossos projetos
+          </a>
+        </div>
+
+        <div class="hero-media">
+          <img
+            src="assets/img/hero-animais.png"
+            alt="Três cães em um abrigo, simbolizando o trabalho de resgate do Instituto Patas do Amanhã"
+            class="hero-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SEÇÃO INTERATIVA (SPA) - VISUALMENTE É SÓ UMA ÁREA DE NAVEGAÇÃO RÁPIDA -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Conheça nossa plataforma</h2>
+        <p class="mt-2">
+          Veja, em poucos cliques, como funcionam os principais módulos do Instituto Patas do Amanhã:
+          visão geral da ONG, projetos em andamento e o caminho para se tornar voluntário.
+        </p>
+
+        <div class="spa-menu mt-2">
+          <button type="button" class="btn btn-primary" data-spa-view="sobre">Sobre a ONG</button>
+          <button type="button" class="btn" data-spa-view="projetos">Projetos</button>
+          <button type="button" class="btn" data-spa-view="cadastro">Quero ser voluntário</button>
+        </div>
+
+        <div id="spa-root" class="mt-3"></div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section class="section">
+      <div class="container">
+        <h2>Quem somos</h2>
+        <p>
+          O Instituto Patas do Amanhã é uma ONG com sede em São Paulo, dedicada ao resgate, tratamento,
+          reabilitação e adoção responsável de animais abandonados ou vítimas de maus-tratos.
+        </p>
+      </div>
+    </section>
+
+    <!-- MISSÃO, VISÃO E VALORES -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Missão, Visão e Valores</h2>
+
+        <div class="grid-12">
+          <article class="card col-4">
+            <h3>Missão</h3>
+            <p>Resgatar, proteger e oferecer um futuro digno para animais em situação de vulnerabilidade.</p>
+          </article>
+
+          <article class="card col-4">
+            <h3>Visão</h3>
+            <p>Ser referência nacional em resgate, acolhimento e reabilitação animal com transparência e respeito.</p>
+          </article>
+
+          <article class="card col-4">
+            <h3>Valores</h3>
+            <ul>
+              <li>Compromisso com o bem-estar animal</li>
+              <li>Ética e transparência</li>
+              <li>Responsabilidade socioambiental</li>
+              <li>Empatia e respeito à vida</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section">
+      <div class="container">
+        <h2>Entre em contato</h2>
+        <p><strong>Telefone:</strong> (11) 94587-3020</p>
+        <p><strong>E-mail:</strong> contato@patasdoamanha.org</p>
+        <p><strong>Endereço:</strong> Rua das Flores, 1220 – São Paulo, SP</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Instituto Patas do Amanhã. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
